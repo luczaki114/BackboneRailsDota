@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script type="text/javascript">
+    var global = glabal || {};
+    global.apiKey = '<%=@key %>';
+  </script>
 
 <%= yield %>
 
