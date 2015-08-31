@@ -1,5 +1,5 @@
 class HeroesController < ApplicationController
-  # before_filter :restrict_access
+  before_filter :restrict_access
 
 
   def index
@@ -9,11 +9,13 @@ class HeroesController < ApplicationController
   end
 
   def show
+    @key = ENV['API_KEY']
     @hero = Hero.find(params[:id])
     render json: @hero
   end
 
   def create
+    @key = ENV['API_KEY']
     @hero = Hero.create({
       :name => params[:name]
       })
@@ -21,12 +23,14 @@ class HeroesController < ApplicationController
   end
 
   def update
+    @key = ENV['API_KEY']
     @hero = Hero.find(params[:id])
     @hero.update(hero_params)
     render json: @hero
   end
 
   def destroy
+    @key = ENV['API_KEY']
     @hero = Hero.find(params[:id])
     @hero.destroy
 

@@ -17,9 +17,3 @@
 //= require backbone.min
 //= require turbolinks
 //= require_tree .
-
-$.ajaxSetup({
-  beforeSend: function(xhr){
-    xhr.setRequestHeader("Authorization", 'Token token=' + global.apiKey)
-  }
-});

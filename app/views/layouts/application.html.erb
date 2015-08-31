@@ -10,6 +10,11 @@
   <script type="text/javascript">
     var global = global || {};
     global.apiKey = '<%= @key %>';
+    $.ajaxSetup({
+      beforeSend: function(xhr){
+        xhr.setRequestHeader("Authorization", 'Token token=' + global.apiKey)
+      }
+    });
   </script>
 
 <div class="container-fluid">
