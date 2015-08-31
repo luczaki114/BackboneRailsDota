@@ -40,16 +40,13 @@ app.blueprints.collectionView = Backbone.View.extend({
       that.render();
     });
     // retrieve data from my API 'all get' route
-    this.collection.fetch();
     this.$el.html(''); // empty out any content inside of my $el
-
   },
   render: function() {
     console.log('rendering collectionView');
     var collection = this.collection.models;
-    console.log(collection);
     for (var model in collection) {
-      console.log(collection[model].attributes);
+      // console.log(collection[model].attributes);
       // memory purposes
       new app.blueprints.modelView({
         el: $('#heroes-list'),
@@ -67,7 +64,5 @@ $(document).ready(function () {
      collection: app.active.heroes,
      el: $('#heroes-list')
    });
-
-  app.active.collectionView.render();
 
 });
