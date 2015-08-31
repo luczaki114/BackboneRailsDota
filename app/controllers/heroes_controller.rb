@@ -4,8 +4,8 @@ class HeroesController < ApplicationController
 
   def index
     @key = ENV['API_KEY']
-    @hero = Hero.all
-    render json: @people
+    @heros = Hero.all
+    render json: @heros
   end
 
   def show
@@ -23,7 +23,7 @@ class HeroesController < ApplicationController
   def update
     @hero = Hero.find(params[:id])
     @hero.update(hero_params)
-    render json: @person
+    render json: @hero
   end
 
   def destroy

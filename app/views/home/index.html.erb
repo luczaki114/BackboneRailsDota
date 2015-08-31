@@ -1,1 +1,58 @@
 <h1>Heros and stuff</h1>
+
+<h1>Listing Heros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ability 1</th>
+      <th>Ability 2</th>
+      <th>Ability 3</th>
+      <th>Ability 4</th>
+      <th>Ability 5</th>
+      <th>Ability 6</th>
+      <th>Str</th>
+      <th>Str gain</th>
+      <th>Agi</th>
+      <th>Agi gain</th>
+      <th>Intel</th>
+      <th>Intel gain</th>
+      <th>Move speed</th>
+      <th>Sight range</th>
+      <th>Armor</th>
+      <th>Base attack time</th>
+      <th>Damage</th>
+      <th>Attack point</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody class='test' id='heroes-list'>
+
+  </tbody>
+
+  <script type="text/template" id="heroes-template">
+    <tr>
+      <td><%%= name %></td>
+      <td><%%= ability1 %></td>
+      <td><%%= ability2 %></td>
+      <td><%%= ability3 %></td>
+      <td><%%= ability4 %></td>
+      <td><%%= ability5 %></td>
+      <td><%%= ability6 %></td>
+      <td><%%= str %></td>
+      <td><%%= str_gain %></td>
+      <td><%%= agi %></td>
+      <td><%%= agi_gain %></td>
+      <td><%%= intel %></td>
+      <td><%%= intel_gain %></td>
+      <td><%%= move_speed %></td>
+      <td><%%= sight_range %></td>
+      <td><%%= armor %></td>
+      <td><%%= base_attack_time %></td>
+      <td><%%= damage %></td>
+      <td><%%= attack_point %></td>
+    </tr>
+  </script>
+
+</table>
