@@ -25,7 +25,15 @@ class HeroesController < ApplicationController
   def update
     @key = ENV['API_KEY']
     @hero = Hero.find(params[:id])
-    @hero.update(hero_params)
+    @hero.update({
+      :name =>params[:name],
+      :ability1 => params[:ability1],
+      :ability2 => params[:ability2],
+      :ability3 => params[:ability3],
+      :ability4 => params[:ability4],
+      :ability5 => params[:ability5],
+      :ability6 => params[:ability6]
+    })
     render json: @hero
   end
 
@@ -46,11 +54,8 @@ private
     end
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def hero_params
-    params.require(:hero).permit(:name)
-
-    #  :ability1, :ability2, :ability3, :ability4, :ability5, :ability6, :str, :str_gain, :agi, :agi_gain, :intel, :intel_gain, :move_speed, :sight_range, :armor, :base_attack_time, :damage, :attack_point)
-  end
+  # def hero_params
+  #   params.require(:hero).permit(:name, :ability1, :ability2, :ability3, :ability4, :ability5, :ability6, :str, :str_gain, :agi, :agi_gain, :intel, :intel_gain, :move_speed, :sight_range, :armor, :base_attack_time, :damage, :attack_point)
+  # end
 
 end
