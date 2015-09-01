@@ -31,3 +31,11 @@
 ######but!
 
 -Backbone cannot access the api because it doesnt have a production key.
+
+-install Heroku toolbelt.
+
+-login to use heroku account using heroku login.
+
+-heroku rails console --app myapp
+
+-in IRB type ApiKey.create. Copy api token.

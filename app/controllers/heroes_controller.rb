@@ -17,7 +17,13 @@ class HeroesController < ApplicationController
   def create
     @key = ENV['API_KEY']
     @hero = Hero.create({
-      :name => params[:name]
+      :name => params[:name],
+      :ability1 => params[:ability1],
+      :ability2 => params[:ability2],
+      :ability3 => params[:ability3],
+      :ability4 => params[:ability4],
+      :ability5 => params[:ability5],
+      :ability6 => params[:ability6]
       })
     render json: @hero
   end
