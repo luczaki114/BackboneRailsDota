@@ -1,15 +1,15 @@
-== README
 
-*A simple rails application that uses backbone to render content from a RESTful api built in RoR.
 
-*Technologies used...
-***Ruby
-***Ruby on Rails
-***ActiveRecord
-***PostgreSQL
-***jQuery
-***Backbone/Underscore
-***Bootstrap
+#A simple rails application that uses backbone to render content from a RESTful api built in RoR.
+
+#Technologies used...
+###Ruby
+###Ruby on Rails
+###ActiveRecord
+###PostgreSQL
+###jQuery
+###Backbone/Underscore
+###Bootstrap
 
 
 *To use locally:
@@ -23,4 +23,4 @@
 *To use with heroku:
 ***So far I managed to upload the rails app and the initial root view shows up with any problems.
 ** but!
-***Backbone cannot access the api because it doesnt have a production key. 
+***Backbone cannot access the api because it doesnt have a production key.
