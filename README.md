@@ -27,15 +27,22 @@
 
 ###To use with heroku:
 
--So far I managed to upload the rails app and the initial root view shows up with any problems.
+-So far I managed to upload the rails app and the initial root view shows up with no problems.
+
+-A simple Github link to the repository is enough to run smoothly.
+
 ######but!
 
 -Backbone cannot access the api because it doesnt have a production key.
 
 -install Heroku toolbelt.
 
--login to use heroku account using heroku login.
+-login to use heroku account using 'heroku login' in terminal.
 
--heroku rails console --app myapp
+- in terminal 'heroku rails console --app myapp'
 
--in IRB type ApiKey.create. Copy api token.
+-in IRB type 'ApiKey.create' Copy api token.
+
+-On your heroku site, go to settings and make a new config variable called API_KEY and paste token value in there.
+
+-Deploy and run!
